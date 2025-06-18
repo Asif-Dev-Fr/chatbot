@@ -13,7 +13,7 @@ def get_openai_response(user_question):
             return jsonify({"error": "OpenAI API key not configured"}), 500
 
         # Define a default maximum number of tokens for the response
-        MAX_RESPONSE_TOKENS = 500
+        MAX_RESPONSE_TOKENS = 50
 
         completion = openai.chat.completions.create(
             model="gpt-4.1-nano",  # Or another available model
